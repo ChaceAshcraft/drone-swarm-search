@@ -1,13 +1,13 @@
 [build-system]
-requires = ["setuptools >= 61.0.0"]
-build-backend = "setuptools.build_meta"
+requires = ["uv_build>=0.9.18,<0.10.0"]
+build-backend = "uv_build"
 
 [project]
 name = "DSSE"
 description = "The Drone Swarm Search project provides an environment for SAR missions built on PettingZoo, where agents, represented by drones, are tasked with locating targets identified as shipwrecked individuals."
 readme = "README.md"
-dynamic = ["version"]
-requires-python = ">= 3.10.5"
+requires-python = ">= 3.13"
+version = "0.26"
 authors = [
     { name="Ricardo Ribeiro Rodrigues", email="ricardorr7@al.insper.edu.br" },
     { name="Renato Laffranchi Falcão", email="renatolf1@al.insper.edu.br" },
@@ -29,27 +29,32 @@ classifiers = [
     'Topic :: Scientific/Engineering :: Artificial Intelligence',
 ]
 dependencies = [
-    "numpy>=1.23.1",
-    "gymnasium>=0.27.1",
-    "pygame>=2.3.0",
-    "pettingzoo>=1.22.3",
-    "matplotlib==3.8.4",
-    "numba>=0.59.0",
+    "numpy",
+    "gymnasium",
+    "pygame",
+    "pettingzoo",
+    "matplotlib",
+    "numba",
+    "h5py>=3.15.1",
+    "dotenv>=0.9.9",
+    "copernicusmarine>=2.3.0",
+    "opendrift>=1.14.8",
+    "psutil>=7.2.2",
 ]
 
 [project.optional-dependencies]
 all = [
-    "numpy>=1.23.1",
-    "gymnasium>=0.27.1",
-    "pygame>=2.3.0",
-    "pettingzoo>=1.22.3",
-    "matplotlib==3.8.4",
-    "numba>=0.59.0",
-    "GDAL==3.4.1",
+    "numpy",
+    "gymnasium",
+    "pygame",
+    "pettingzoo",
+    "matplotlib",
+    "numba",
+    "GDAL",
     "opendrift",
 ]
 coverage = [
-    "GDAL==3.4.1",
+    "GDAL",
     "opendrift",
 ]
 
