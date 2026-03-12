@@ -64,11 +64,5 @@ Repository = "https://github.com/pfeinsper/drone-swarm-search/"
 Documentation = "https://pfeinsper.github.io/drone-swarm-search/"
 "Bug Report" = "https://github.com/pfeinsper/drone-swarm-search/issues/"
 
-[tool.setuptools]
-include-package-data = true
-
-[tool.setuptools.package-data]
-DSSE = ["*.png"]
-
-[tool.setuptools.packages.find]
-include = ["DSSE", "DSSE.*"]
+[tool.uv.build-backend]
+module-name = "DSSE"
